@@ -21,6 +21,13 @@ elseif(WXQT)
     wx_append_sources(GL_FILES OPENGL_QT)
 endif()
 
+message(STATUS "GL_FILES: ${GL_FILES}")
+message(STATUS "OPENGL_INCLUDE_DIR: ${OPENGL_INCLUDE_DIR}")
+message(STATUS "OPENGL_LIBRARIES: ${OPENGL_LIBRARIES}")
+message(STATUS "OPENGL_CMN: ${OPENGL_CMN}")
+message(STATUS "WXMSW: ${WXMSW}")
+message(STATUS "WXGTK: ${WXGTK}")
+
 wx_add_library(wxgl ${GL_FILES})
 wx_lib_include_directories(wxgl ${OPENGL_INCLUDE_DIR})
 wx_lib_link_libraries(wxgl PUBLIC ${OPENGL_LIBRARIES})
